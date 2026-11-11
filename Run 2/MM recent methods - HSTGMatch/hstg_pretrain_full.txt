@@ -1,0 +1,26 @@
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/transformer.py:533: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/NestedTensorImpl.cpp:177.)
+  output = torch._nested_tensor_from_mask(
+Using device: cuda
+Loading data from data/porto_r0.1...
+  Grid size: 54 × 114 = 6156 cells
+  Processed 8000 trajectories.
+  ATA-Graph: 59528 edges over 6156 nodes
+  Train: 7200  Val: 800
+Model parameters: 2,474,766
+
+Starting pre-training for 50 epochs...
+Epoch    1/50  train_loss=4.4779  val_loss=4.1205  lr=9.99e-05
+Epoch    2/50  train_loss=4.0654  val_loss=4.0271  lr=9.96e-05
+Epoch    3/50  train_loss=3.9812  val_loss=3.9719  lr=9.91e-05
+Epoch    4/50  train_loss=3.9584  val_loss=3.9989  lr=9.84e-05
+Epoch    5/50  train_loss=3.9023  val_loss=3.8783  lr=9.76e-05
+Epoch   10/50  train_loss=3.7250  val_loss=3.7372  lr=9.05e-05
+Epoch   20/50  train_loss=3.5023  val_loss=3.5144  lr=6.55e-05
+Epoch   30/50  train_loss=3.3830  val_loss=3.4551  lr=3.45e-05
+Epoch   40/50  train_loss=3.3366  val_loss=3.4359  lr=9.55e-06
+Epoch   50/50  train_loss=3.3175  val_loss=3.4107  lr=0.00e+00
+
+Pre-training complete.
+  Best val loss: 3.3563
+  Best checkpoint: checkpoints/pretrain/best_encoder.pt
+  Final checkpoint: checkpoints/pretrain/final_encoder.pt

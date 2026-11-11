@@ -1,0 +1,40 @@
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/transformer.py:533: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/NestedTensorImpl.cpp:177.)
+  output = torch._nested_tensor_from_mask(
+Using device: cuda
+Loading data from data/porto_r0.1...
+  Loading preprocessor state from checkpoints/pretrain/preprocessor.pkl
+  Grids: 6156  Segments: 11491
+  ATA-Graph edges: 59528
+  Split: train=5600  val=800  test=1600
+Loading pretrained encoder from checkpoints/pretrain/best_encoder.pt...
+  Pretrained encoder loaded successfully.
+Model parameters: 5,795,200
+
+Starting supervised training for 100 epochs...
+Epoch    1/100  train_loss=8.8890  val_loss=8.4546  P=0.0031  R=0.0031  F1=0.0031  lr=5.00e-05
+Epoch    2/100  train_loss=8.1910  val_loss=7.9977  P=0.0118  R=0.0118  F1=0.0118  lr=5.00e-05
+Epoch    3/100  train_loss=7.8715  val_loss=7.7981  P=0.0150  R=0.0150  F1=0.0150  lr=4.99e-05
+Epoch    4/100  train_loss=7.7088  val_loss=7.6627  P=0.0156  R=0.0156  F1=0.0156  lr=4.98e-05
+Epoch    5/100  train_loss=7.5604  val_loss=7.4861  P=0.0179  R=0.0179  F1=0.0179  lr=4.97e-05
+Epoch   10/100  train_loss=6.4674  val_loss=6.3703  P=0.0612  R=0.0612  F1=0.0612  lr=4.88e-05
+Epoch   20/100  train_loss=5.0467  val_loss=5.0213  P=0.1622  R=0.1622  F1=0.1622  lr=4.52e-05
+Epoch   30/100  train_loss=4.3146  val_loss=4.3343  P=0.2396  R=0.2396  F1=0.2396  lr=3.97e-05
+Epoch   40/100  train_loss=3.8351  val_loss=3.8927  P=0.2902  R=0.2902  F1=0.2902  lr=3.27e-05
+Epoch   50/100  train_loss=3.4970  val_loss=3.5652  P=0.3292  R=0.3292  F1=0.3292  lr=2.50e-05
+Epoch   60/100  train_loss=3.2607  val_loss=3.3345  P=0.3619  R=0.3619  F1=0.3619  lr=1.73e-05
+Epoch   70/100  train_loss=3.1139  val_loss=3.1933  P=0.3819  R=0.3819  F1=0.3819  lr=1.03e-05
+Epoch   80/100  train_loss=3.0271  val_loss=3.1232  P=0.3912  R=0.3912  F1=0.3912  lr=4.77e-06
+Epoch   90/100  train_loss=2.9934  val_loss=3.0879  P=0.3958  R=0.3958  F1=0.3958  lr=1.22e-06
+Epoch  100/100  train_loss=2.9900  val_loss=3.0841  P=0.3962  R=0.3962  F1=0.3962  lr=0.00e+00
+
+Evaluating on test set...
+
+=== Test Results ===
+  Loss:      3.0823
+  Precision: 0.3805
+  Recall:    0.3805
+  F1:        0.3805
+
+Best model checkpoint: checkpoints/train/best_model.pt
+Final model checkpoint: checkpoints/train/final_model.pt
+Test results saved to checkpoints/train/test_results.json
