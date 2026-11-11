@@ -1,0 +1,21 @@
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/transformer.py:533: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/NestedTensorImpl.cpp:177.)
+  output = torch._nested_tensor_from_mask(
+Using device: cuda
+Loading data from data/porto_r0.1...
+  Grid size: 54 × 114 = 6156 cells
+  Processed 8000 trajectories.
+  ATA-Graph: 59528 edges over 6156 nodes
+  Train: 7200  Val: 800
+Model parameters: 2,474,766
+
+Starting pre-training for 5 epochs...
+Epoch    1/5  train_loss=4.4586  val_loss=4.1550  lr=9.05e-05
+Epoch    2/5  train_loss=4.0583  val_loss=4.0013  lr=6.55e-05
+Epoch    3/5  train_loss=3.9974  val_loss=3.9851  lr=3.45e-05
+Epoch    4/5  train_loss=3.9654  val_loss=3.9753  lr=9.55e-06
+Epoch    5/5  train_loss=3.9455  val_loss=4.0294  lr=0.00e+00
+
+Pre-training complete.
+  Best val loss: 3.9753
+  Best checkpoint: checkpoints/pretrain/best_encoder.pt
+  Final checkpoint: checkpoints/pretrain/final_encoder.pt

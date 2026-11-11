@@ -1,0 +1,8 @@
+11491 road segments, 10000 test trajectories
+
+ gap(s)  snap acc%  HMM acc%  snap s/1000  HMM s/1000
+     75       69.1      92.1         0.22        5.95
+    150       68.7      88.8         0.20        4.54
+    300       68.1      83.7         0.11        3.75
+    600       67.3      79.0         0.08        3.24
+saved results.csv, results.png

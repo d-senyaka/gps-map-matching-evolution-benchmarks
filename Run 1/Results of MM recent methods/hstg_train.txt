@@ -1,0 +1,31 @@
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/transformer.py:533: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/NestedTensorImpl.cpp:177.)
+  output = torch._nested_tensor_from_mask(
+Using device: cuda
+Loading data from data/porto_r0.1...
+  Loading preprocessor state from checkpoints/pretrain/preprocessor.pkl
+  Grids: 6156  Segments: 11491
+  ATA-Graph edges: 59528
+  Split: train=5600  val=800  test=1600
+Loading pretrained encoder from checkpoints/pretrain/best_encoder.pt...
+  Pretrained encoder loaded successfully.
+Model parameters: 5,795,200
+
+Starting supervised training for 10 epochs...
+Epoch    1/10  train_loss=8.8863  val_loss=8.4644  P=0.0036  R=0.0036  F1=0.0036  lr=4.88e-05
+Epoch    2/10  train_loss=8.2087  val_loss=8.0196  P=0.0131  R=0.0131  F1=0.0131  lr=4.52e-05
+Epoch    3/10  train_loss=7.8956  val_loss=7.8285  P=0.0154  R=0.0154  F1=0.0154  lr=3.97e-05
+Epoch    4/10  train_loss=7.7510  val_loss=7.7171  P=0.0155  R=0.0155  F1=0.0155  lr=3.27e-05
+Epoch    5/10  train_loss=7.6461  val_loss=7.6239  P=0.0157  R=0.0157  F1=0.0157  lr=2.50e-05
+Epoch   10/10  train_loss=7.3969  val_loss=7.4232  P=0.0187  R=0.0187  F1=0.0187  lr=0.00e+00
+
+Evaluating on test set...
+
+=== Test Results ===
+  Loss:      7.4445
+  Precision: 0.0173
+  Recall:    0.0173
+  F1:        0.0173
+
+Best model checkpoint: checkpoints/train/best_model.pt
+Final model checkpoint: checkpoints/train/final_model.pt
+Test results saved to checkpoints/train/test_results.json
